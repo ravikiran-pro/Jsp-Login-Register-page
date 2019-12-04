@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title class="title">welcome!</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript">
+//Toggling between login and register popup's using twp functions..
+function togglelogin() {
+  var contentId = document.getElementById("login");
+contentId.style.display = "block"; 
+}
+function toggleregister() {
+  // Get the DOM reference
+  var contentId = document.getElementById("register");
+contentId.style.display = "block"; 
+}
+</script>
+</head>
+<body>
+
+<!-- Have divided into four parts
+1.) Header class hold the website name...
+2.) The login and register class are the one hiding to show the context of login and register..refer css for more details..
+3.) A login class has the login form redirects to the main page.
+4.) And register class which helps users to hold accounts ...on successful registration a account is created.
+ -->
+	<div class="header">
+		<div class="main">
+			<img src="css\images\icon\logo.png" class="logo">
+		</div>
+
+
+	<!-- Toggle buttons -->
+	<div class="loginbutton">
+		<input type="submit" name="loginpop" value="login" onclick="togglelogin()" class="popup">
+	</div>
+	<div class="registerbutton">
+		<input type="submit" name="regpop" value="Register" onclick="toggleregister()" class="popup">
+	</div>
+	
+	
+		<!-- Login Form -->
+		<div class="login" id="login">		
+			<form action="login.jsp" method="post">
+				<table>
+					<tr>
+						<td class="logcol"><input type="text" name="l_name" value="proraviki@gmail.com" class="col"></td>
+					</tr>
+					<tr></tr><tr></tr><tr></tr><tr></tr>
+					<tr>
+						<td class="logcol"><input type="password" name="passwd" value="Ravikiran@ms1" class="col"></td>
+					</tr>
+				</table>
+				<i class="forget" style="padding-right: 230px; padding-bottom: 230px;"><a href="www.google.com">Forget password?</i></a>
+				<input type="submit" name="Login" value="LOGIN" class="loginsub"><br><br>
+		</form>
+		</div>
+		
+		<!-- Register form -->
+		<div class="register" id="register">	
+			<form action="register.jsp" method="POST">
+				<table>
+					<tr>
+						<td class="left">UserName</td>
+						<td class="rcol"><input type="text" name="uname" value="Ravi" class="col"></td>
+					</tr>
+					<tr></tr><tr></tr><tr></tr><tr></tr>
+					<tr>
+						<td class="left">Name</td>
+						<td class="rcol"><input type="text" name="name" value="kiran" class="col"></td>
+					</tr>
+					<tr></tr><tr></tr><tr></tr><tr></tr>
+					<tr>
+						<td class="left">Email Id</td>	
+						<td class="rcol"><input type="email" name="email" value="proraviki@gmail.com" class="col"></td>
+					</tr>
+					<tr></tr><tr></tr><tr></tr><tr></tr>
+					<tr>
+						<td class="left">Password</td>	
+						<td class="rcol"><input type="password" name="pass" value="Ravikiran@ms1" class="col"></td>
+					</tr>
+
+					<tr></tr><tr></tr><tr></tr><tr></tr>
+					<tr>
+						<td class="left">Re-Enter-password</td>	
+						<td class="rcol"><input type="password" name="re_pass" value="Ravikiran@ms1" class="col"></td>
+					</tr>
+				</table>
+				<input type="submit" class="registersub"><br><br>
+			</form>
+		</div>
+
+	</div>
+	
+</body>
+</html>
