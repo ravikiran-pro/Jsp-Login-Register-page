@@ -1,42 +1,45 @@
 # Jsp-Login-Register-page
+### A basic login and Register page using jsp connected with oracle database
 
-A basic login and Register page using jsp connected with oracle database
+## DIRECTORY
 
-index.html        -->Login/register page
-homepage.html     -->Redirecting After login page
-jsp/login.jsp     -->Checking login details with oracle database
+- <b>index.html</b>         -<i>Login/register page</i>
 
-                      [] Supporting username with password
-                      [] Supporting Email with password
+- <b>homepage.html</b>     -<i>Redirecting After login page</i>
 
-jsp/register.jsp  -->Adding user data to oracle database with function like
+- <b>jsp/login.jsp</b>     -<i> Checking login details with oracle database</i>
 
-                      []  pasword check (Should contain a uppercase letter,special symbol,
-                          number and password must be greater than 8 characters)                          
-                      []  Username already available or Not
-                      []  Age restrictions
+				> Supporting username with password
+        	        > Supporting Email with password
+				
+- <b>jsp/register.jsp</b>  - <i>Adding user data to oracle database with function like</i>
 
+			      > pasword check (Should contain a uppercase letter,special symbol,
+                         number and password must be greater than 8 characters)                          
+                    > Username already available or Not
+                    > Age restrictions
 
-****************************************************************************
---> Open Your Respective Java ide.
---> Import Jsp-Login-Register-page.zip as Dynamic web project.
---> Configure Apache Tomcat.
---> Run the program in eclipse Server.
---> Now the browser you load your page
+## INSTALLATION_INSTRUCTIONS
 
-*****************************************************************************
-Configuring Oracle
--->Open cmd Run sqllite
--->Enter Your password and username
--->copy and paste WebCommunity\sql.sql
--->Create the database
--->open WebCommunity\jsp\login.jsp && WebCommunity\jsp\Register.jsp
--->Replace the following
-   DBMS ---> With your database username
-   dbms ---> With your database password
-   
+### Setting up project 
+- Open Your Respective Java ide.
+- Import Jsp-Login-Register-page.zip as Dynamic web project.
+- Configure Apache Tomcat.
+- Run the program in eclipse using Apache Server.
+- Now the in-built ide browser will load the login page
+
+### Configuring oracle
+- Open cmd Run sqllite
+- Enter Your password and username
+- copy and paste WebCommunity\sql.sql
+- Create the database
+- open WebCommunity\jsp\login.jsp && WebCommunity\jsp\Register.jsp
+- Replace the following code snippet
+   ```
       Class.forName("oracle.jdbc.driver.OracleDriver");  
 	        Connection con=DriverManager.getConnection(  
 	        "jdbc:oracle:thin:@localhost:1521:xe","DBMS","dbms");
-                                                 
-*****************************************************************************
+                
+     Dbms -> Your oracle username
+     dbms -> Your oracle password
+  ```
