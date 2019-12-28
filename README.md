@@ -35,7 +35,7 @@
 - Create the database
 - open WebCommunity\jsp\login.jsp && WebCommunity\jsp\Register.jsp
 - Replace the following code snippet
-   ```
+   ```java
       Class.forName("oracle.jdbc.driver.OracleDriver");  
 	        Connection con=DriverManager.getConnection(  
 	        "jdbc:oracle:thin:@localhost:1521:xe","DBMS","dbms");
